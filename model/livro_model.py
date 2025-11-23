@@ -6,9 +6,9 @@ class LivroModel:
         try:
             self.conexao = psycopg2.connect(
                 host = "localhost",
-                database = "bibliotecabd",
+                database = "bibliotec_uni_av3",
                 user = "postgres",
-                password = "admin6",
+                password = "admin",
                 port = "5432"
             )
             self.cursor = self.conexao.cursor()

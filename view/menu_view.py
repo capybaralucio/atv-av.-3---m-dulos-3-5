@@ -4,9 +4,12 @@ from view.autor_view import AutorView
 from view.livro_view import LivroView
 
 class MenuView:
+    def __init__(self):
+        self.autor_view = AutorView()
+        self.livro_view = LivroView()
 
-    def menu_principal(self):
-        while True
+    def exibir_menu(self):
+        while True:
             print("\n===== MENU PRINCIPAL =====")
             print("1 - Gerenciar autor")
             print("2 - Gerenciar livro")
@@ -14,10 +17,10 @@ class MenuView:
             op = input("Escolha uma opção: ")
 
             if op == "1":
-                AutorView().menu()
+                self.autor_view.menu_autor()
             
             elif op == "2":
-                LivroView().menu()
+                self.livro_view.menu_livro()
 
             elif op == "3":
                 print("Encerrando o programa da Bilioteca. . .")

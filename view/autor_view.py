@@ -3,11 +3,11 @@
 from controller.autor_controller import AutorController
 
 class AutorView:
-    def menu(self):
+    def menu_autor(self):
         controller = AutorController()
 
         while True:
-            print("\n---- GERENCIAR AUTOR ----\n")
+            print("\n---- MENU AUTOR ----\n")
             print("1 - Cadastrar autor")
             print("2 - Listar autor")
             print("3 - Atualizar autor")
@@ -22,11 +22,11 @@ class AutorView:
                 nome = input ("Nome do autor: ")
                 nacionalidade = input("Nacionalidade: ")
 
-                controller.cadastrar(nome, nacionalidade)
+                controller.cadastrar_autor(nome, nacionalidade)
 
 
             elif opcao == "2":
-                autores = controller.listar()
+                autores = controller.listar_autores()
 
                 print("\n=== LISTA DE AUTORES ===")
                 for a in autores:

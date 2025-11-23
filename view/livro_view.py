@@ -3,8 +3,8 @@
 from controller.livro_controller import LivroController
 
 class LivroView:
-    def menu(self):
-        controller = AutorController()
+    def menu_livro(self):
+        controller = LivroController()
 
         while True:
             print("\n---- GERENCIAR LIVRO ----\n")
@@ -28,7 +28,7 @@ class LivroView:
                 livros = controller.listar()
                 print("\n=== LISTA DE LIVROS ===")
                 for l in livros:
-                    print(f"ID: {1[0]} | Título: {1[1]} | Ano: {1[2]} | Autor: {l[3]}")
+                    print(f"ID: {l[0]} | Título: {1[1]} | Ano: {1[2]} | Autor: {l[3]}")
 
             elif opcao == "3":
                 id_livro = input("ID do livro: ")
