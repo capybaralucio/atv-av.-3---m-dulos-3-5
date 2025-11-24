@@ -55,4 +55,4 @@ class LivroController:
         for livro in livros:
             texto += f"ID: {livro[0]} | Título: {livro[1]} | Ano: {livro[2]} | Autor: {livro[3]} | Nacionalidade: {livro[4]}\n"
         
-        return texto
+        return texto 
