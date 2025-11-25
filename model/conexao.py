@@ -11,7 +11,7 @@ class Conexao:
         self.conexao = None
 
     def conectar(self):
-        try:
+        try: 
             self.conexao = psycopg2.connect(
                 host=self.host,
                 database=self.database,
